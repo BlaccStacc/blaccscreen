@@ -1,0 +1,11 @@
+{
+"security.workspace.trust.enabled": false,
+"update.enableWindowsBackgroundUpdates": false,
+"extensions.autoCheckUpdates": false,
+"update.mode": "none",
+"telemetry.enableCrashReporter": false,
+"telemetry.telemetryLevel": "off",
+"disable-workspace-trust": true,
+"application.verifySignature": false
+
+}
