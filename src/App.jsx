@@ -7,8 +7,11 @@ import Login2FA from "./pages/Login2FA";
 import Register from "./pages/Register";
 import VerifyEmail from "./pages/VerifyEmail";
 import Dashboard from "./pages/Dashboard";
-import TwoFASetup from "./pages/TwoFASetup"; // 👈 add this
+import TwoFASetup from "./pages/TwoFASetup";
 import NotFound from "./pages/NotFound";
+
+// 👇 NEW
+import Garage from "./pages/Garage";
 
 export default function App() {
   return (
@@ -31,12 +34,22 @@ export default function App() {
             }
           />
 
-          {/* 👇 NEW: protected 2FA setup page */}
+          {/* Protected 2FA setup page */}
           <Route
             path="/security/2fa"
             element={
               <ProtectedRoute>
                 <TwoFASetup />
+              </ProtectedRoute>
+            }
+          />
+
+          {/* 👇 NEW: GARAGE UI (protected) */}
+          <Route
+            path="/garage"
+            element={
+              <ProtectedRoute>
+                <Garage />
               </ProtectedRoute>
             }
           />
